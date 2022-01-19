@@ -10,7 +10,7 @@ contract("BookContract", () => {
         this.bookContract = await BookContract.deployed();
     })
 
-    //describes testing
+    //Deploying contract
     it('Migrate deployed succesfully', async () => {
         const address = this.bookContract.address;
 
@@ -20,6 +20,7 @@ contract("BookContract", () => {
         assert.notEqual(address, "");
     })
 
+    //Test books array
     it('Get Book List', async () => {
         const _bookCount = await this.bookContract.bookCount();
         const _book = await this.bookContract.books(_bookCount);
@@ -27,11 +28,18 @@ contract("BookContract", () => {
         assert.equal(_book.id.toNumber(), _bookCount);
 
     })
-
-    it('Task created succesfully', async () =>{
+    //Test addBook
+    it('Book created succesfully', async () => {
         const result = await this.bookContract.addBook("Book Test 0x0", "This is a book created from test");
         const bookEvent = result.logs[0].args;
         assert.equal(bookEvent.id.toNumber(), 2);
+    })
+    //Test lendbook
+    it('Book lended succesfully', async () => {
+        const _bookCount = await this.bookContract.bookCount();
+        const result = await this.bookContract.lendBook(_bookCount);
+        const lendBookEvent = result.logs[0].args;
+        assert.equal(lendBookEvent.id.toNumber(),_bookCount);
     })
 
 });
