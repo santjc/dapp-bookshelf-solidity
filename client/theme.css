@@ -1,0 +1,65 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul,div,section,main,figure,a {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    color: rgb(242, 242, 242);
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /*CSS RESET*/
+
+  #app{
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(34, 34, 34);
+  }
+
+  #head-title{
+      font-size: 2em;
+      border-bottom: 1px solid rgb(242, 242, 242);
+      padding: 20px;
+      text-align: center;
+      justify-content: center;
+      display: flex;
+  }
+
+  #bookshelf{
+      display: flex;
+  }
+
+  #book-nav{
+      display: flex;
+      max-height: 100vh;
+      flex-direction: column;
+      box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 0px inset;
+      flex: 0.25;
+      /*background: rgb(39, 38, 39) none repeat scroll 0% 0%;*/
+      background: rgba(0, 0, 0, 0) linear-gradient(0deg, rgba(127, 127, 213, 0.2) 19.87%, rgba(134, 168, 231, 0.2) 58.46%, rgba(145, 234, 228, 0.2) 97.05%) repeat scroll 0% 0%;
+  }
+
+  #book-container{
+      max-height: 100vh;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    flex: 0.75;
+}

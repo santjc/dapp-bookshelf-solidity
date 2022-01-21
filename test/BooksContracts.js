@@ -26,6 +26,7 @@ contract("BookContract", () => {
         const _book = await this.bookContract.books(_bookCount);
 
         assert.equal(_book.id.toNumber(), _bookCount);
+        
 
     })
     //Test addBook
@@ -38,8 +39,10 @@ contract("BookContract", () => {
     it('Book lended succesfully', async () => {
         const _bookCount = await this.bookContract.bookCount();
         const result = await this.bookContract.lendBook(_bookCount);
-        const lendBookEvent = result.logs[0].args;
-        assert.equal(lendBookEvent.id.toNumber(),_bookCount);
+        const _book = await this.bookContract.books(_bookCount);
+        assert.equal(_book.available,false);
+
+
     })
 
 });

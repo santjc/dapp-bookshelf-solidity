@@ -1,11 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.11;
-
+// 1:44
 contract BookContracts{
     uint256 public bookCount = 0;
 
     //Executes code once the contract is deployed.
-
     struct Book{
         uint256 id;
         string title;
@@ -13,7 +12,7 @@ contract BookContracts{
         bool available;
         uint lendAt;
     }
-    mapping (uint => Book) public books;
+    mapping (uint256 => Book) public books;
     
     constructor(){
         addBook("Book 0x0", "Book 0x0 by Santiago");
@@ -25,7 +24,7 @@ contract BookContracts{
         emit BookAdded(bookCount,_title,_description, true, 0);
     } 
 
-    function lendBook(uint _id) public{
+    function lendBook(uint256 _id) public{
         Book memory _book = books[_id];
         _book.lendAt = block.timestamp;
         _book.available = false;
