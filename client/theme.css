@@ -1,65 +1,135 @@
 html {
-    box-sizing: border-box;
-    font-size: 16px;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  body, h1, h2, h3, h4, h5, h6, p, ol, ul,div,section,main,figure,a {
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-    color: rgb(242, 242, 242);
-    text-decoration: none;
-    font-family: 'Lato', sans-serif;
-  }
-  
-  ol, ul {
-    list-style: none;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+  box-sizing: border-box;
+  font-size: 16px;
+}
 
-  /*CSS RESET*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
-  #app{
-      display: flex;
-      flex-direction: column;
-      background-color: rgb(34, 34, 34);
-  }
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+div,
+section,
+main,
+figure,
+a {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  color: rgb(242, 242, 242);
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+}
 
-  #head-title{
-      font-size: 2em;
-      border-bottom: 1px solid rgb(242, 242, 242);
-      padding: 20px;
-      text-align: center;
-      justify-content: center;
-      display: flex;
-  }
+body {
+  height: 100vh;
+  padding: 0;
+}
+ol,
+ul {
+  list-style: none;
+}
 
-  #bookshelf{
-      display: flex;
-  }
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-  #book-nav{
-      display: flex;
-      max-height: 100vh;
-      flex-direction: column;
-      box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 0px inset;
-      flex: 0.25;
-      /*background: rgb(39, 38, 39) none repeat scroll 0% 0%;*/
-      background: rgba(0, 0, 0, 0) linear-gradient(0deg, rgba(127, 127, 213, 0.2) 19.87%, rgba(134, 168, 231, 0.2) 58.46%, rgba(145, 234, 228, 0.2) 97.05%) repeat scroll 0% 0%;
-  }
+/*CSS RESET*/
 
-  #book-container{
-      max-height: 100vh;
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    flex: 0.75;
+#app {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(34, 34, 34);
+  height: 100%;
+}
+
+#head-title {
+  font-size: 2em;
+  border-bottom: 1px solid rgb(242, 242, 242, 0.1);
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0) linear-gradient(0deg, rgba(127, 127, 213, 0.2) 19.87%, rgba(134, 168, 231, 0.2) 58.46%, rgba(145, 234, 228, 0.2) 97.05%) repeat scroll 0% 0%;
+  display: flex;
+}
+
+#footer{
+  font-size: 16px;
+  position: relative;
+  margin-top: auto;
+  bottom: 0;
+  border-top: 1px solid rgb(242, 242, 242, 0.1);
+  color: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+#bookshelf {
+  display: flex;
+  height: 100%;
+}
+
+#book-nav {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 0px inset;
+  flex: 0.25;
+  background: rgb(39, 38, 39) none repeat scroll 0% 0%;
+  border-right: 1px solid rgb(242, 242, 242, 0.1);
+  /*background: rgba(0, 0, 0, 0) linear-gradient(0deg, rgba(127, 127, 213, 0.2) 19.87%, rgba(134, 168, 231, 0.2) 58.46%, rgba(145, 234, 228, 0.2) 97.05%) repeat scroll 0% 0%;*/
+}
+
+#book-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  flex-wrap: wrap;
+  flex: 0.75;
+}
+
+.book{
+  display: flex;
+  flex-direction: column;
+  background: rgb(39, 38, 39) none repeat scroll 0% 0%;
+  margin: 10px;
+  border: 1px solid rgba(255, 115, 36,0.2);
+  max-height: 200px;
+  flex: 1;
+}
+
+.book-header{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(242, 242, 242, 0.1);
+  padding: 15px;
+}
+
+.book-content{
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.book-desc{
+  font-size: 1.25em;
+}
+
+.book-lend_date{
+  font-size: 1em;
+  margin: 10px 0;
+  color: rgb(242, 242, 242, 0.5);;
 }
