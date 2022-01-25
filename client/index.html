@@ -21,23 +21,22 @@
         <section id="bookshelf">
             <main id="book-nav">
                 <figure class="wallet">
-                    <span class="btn" id="addWallet">Add Wallet</span>
+                    <span class="btn2" id="addWallet">Add Wallet</span>
                     <span id="wallet-address"></span>
                 </figure>
 
-                <figure class="book-control">
+                <form id="addBookForm" class="book-control">
                     <h3>Add a book</h3>
-                    <input type="text" placeholder="Book name..." name="" id="bookName">
-                    <input type="text" placeholder="Book description..." name="" id="bookDesc">
-
-                    <a href="" class="btn add-book">Add book</a>
-                </figure>
+                    <input type="text" placeholder="Book name..." name="bookName">
+                    <textarea type="text" placeholder="Book description..." name="bookDesc"></textarea>
+                    <button type="submit" class="btn add-book">Add book</a>
+                </form>
             </main>
             <main id="book-container">
                 <figure id="book0x0" class="book">
                     <div class="book-header">
                         <h1 class="book-title">Book 0x0</h1>
-                        <a href="" class="available">AV</a>
+                        <a href="" class="btn2 available">AV</a>
                     </div>
                     <div class="book-content">
                         <h3 class="book-desc">Book 0x0 Description by Santiago 0x0</h3>
@@ -51,5 +50,6 @@
     </section>
 
 </body>
+<script src="../../node_modules/@truffle/contract/dist/truffle-contract.min.js"></script>
 <script src="app.js"></script>
 </html>

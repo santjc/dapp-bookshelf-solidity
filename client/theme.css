@@ -9,6 +9,26 @@ html {
   box-sizing: inherit;
 }
 
+h1, h2, h3, h4, h5, h6,
+button, input, select, textarea {
+    font-family: 'Lato', sans-serif;
+}
+::-webkit-input-placeholder {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+:-moz-placeholder {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+::-moz-placeholder {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+:-ms-input-placeholder {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}
 body,
 h1,
 h2,
@@ -116,13 +136,18 @@ img {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid rgb(242, 242, 242, 0.1);
-  padding: 15px;
+  padding: 10px;
 }
 
 .book-content {
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  padding: 10px;
+}
+
+.book-title{
+  text-align: center;
+  margin: auto 0;
 }
 
 .book-desc {
@@ -165,13 +190,14 @@ img {
   margin: 10px 0;
 }
 
-.book-control input {
+.book-control input,.book-control textarea {
   border: 1px solid rgb(178, 178, 178);
   color: rgb(242, 242, 242);
   background: rgb(76, 76, 76) none repeat scroll 0% 0%;
   padding: 0.5rem 2rem 0.5rem 0.5rem;
   padding-left: 0.5rem;
   border-radius: 0.25em;
+  resize: none;
   width: 100%;
   margin: 5px 0;
 }
@@ -183,9 +209,22 @@ img {
   text-decoration: none;
   display: inline-block;
   padding: 0.5rem 0.75rem;
-  font-size: 1rem;
+  font-size: 14px;
   border-radius: 0.25em;
   text-align: center;
+}
+
+.btn2 {
+  background: none;
+  border: 1px solid rgb(255, 115, 36);
+  color: rgb(242, 242, 242) !important;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  font-size: 14px;
+  border-radius: 0.25em;
+  text-align: center;
+  margin: 5px 0;
 }
 
 .add-book{
@@ -193,11 +232,5 @@ img {
 }
 
 #addWallet{
-  margin: 5px 0;
-  cursor: pointer;
-  background: none;
-  border: 1px solid rgb(255, 115, 36);
-  color: rgb(242, 242, 242) !important;
-  font-size: 14px;
   max-width: 150px;
 }
