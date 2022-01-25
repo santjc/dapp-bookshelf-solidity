@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="https://icons-for-free.com/iconfiles/png/512/blockchain+cryptocurrency+currency+ethereum+money+icon-1320168258970240520.png" type="image/x-icon">
+    <link rel="shortcut icon"
+        href="https://icons-for-free.com/iconfiles/png/512/blockchain+cryptocurrency+currency+ethereum+money+icon-1320168258970240520.png"
+        type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="theme.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solidity Bookshelf</title>
 </head>
+
 <body>
     <section id="app">
         <h1 id="head-title">dApp | Bookshelf</h1>
         <section id="bookshelf">
-            <main id="book-nav"></main>
+            <main id="book-nav">
+                <figure class="wallet">
+                    <span class="btn" id="addWallet">Add Wallet</span>
+                    <span id="wallet-address"></span>
+                </figure>
+
+                <figure class="book-control">
+                    <h3>Add a book</h3>
+                    <input type="text" placeholder="Book name..." name="" id="bookName">
+                    <input type="text" placeholder="Book description..." name="" id="bookDesc">
+
+                    <a href="" class="btn add-book">Add book</a>
+                </figure>
+            </main>
             <main id="book-container">
                 <figure id="book0x0" class="book">
                     <div class="book-header">
@@ -27,11 +44,12 @@
                         <h3 class="book-lend_date">Lended at 06/28/2021, 14:00 PM Est</h3>
                     </div>
                 </figure>
-                
+
             </main>
         </section>
         <h1 id="footer">santjc</h1>
     </section>
-    
+
 </body>
+<script src="app.js"></script>
 </html>
