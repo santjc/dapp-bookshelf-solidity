@@ -4,7 +4,6 @@ pragma solidity ^0.8.11;
 contract BookContracts{
     uint256 public bookCount = 0;
 
-    //Executes code once the contract is deployed.
     struct Book{
         uint256 id;
         string title;
@@ -16,6 +15,8 @@ contract BookContracts{
     
     constructor(){
         addBook("Book 0x0", "Book 0x0 by Santiago");
+        addBook("Book 0x1", "Book 0x2 by Santiago-0x02");
+        addBook("Book 0x2", "Book 0x2 by Santiago-0x03");
     }
 
     function addBook(string memory _title, string memory _description) public{
